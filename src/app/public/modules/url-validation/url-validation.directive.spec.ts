@@ -1,4 +1,5 @@
 import {
+  async,
   TestBed,
   ComponentFixture,
   fakeAsync,
@@ -11,6 +12,10 @@ import {
 import {
   By
 } from '@angular/platform-browser';
+
+import {
+  expect
+} from '@skyux-sdk/testing';
 
 import {
   SkyUrlValidationFixturesModule
@@ -42,8 +47,6 @@ describe('Url validation', () => {
 
     inputEl.dispatchEvent(changeEvent);
     compFixture.detectChanges();
-    tick();
-
   }
 
   let component: UrlValidationTestComponent;
@@ -76,8 +79,8 @@ describe('Url validation', () => {
     expect(ngModel.control.valid).toBe(true);
     expect(ngModel.control.pristine).toBe(false);
     expect(ngModel.control.touched).toBe(false);
-
   }));
+
   it('should validate incorrect input', fakeAsync(() => {
     fixture.detectChanges();
     tick();
@@ -103,5 +106,14 @@ describe('Url validation', () => {
     expect(ngModel.control.valid).toBe(true);
     expect(ngModel.control.pristine).toBe(false);
     expect(ngModel.control.touched).toBe(false);
+  }));
+
+  it('should pass accessibility', async(() => {
+    fixture.detectChanges();
+    setInput(nativeElement, '[]awefhawenfc0293ejwf]', fixture);
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      expect(fixture.nativeElement).toBeAccessible();
+    });
   }));
 });

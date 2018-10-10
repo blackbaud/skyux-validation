@@ -1,4 +1,5 @@
 import {
+  async,
   TestBed,
   ComponentFixture,
   fakeAsync,
@@ -11,6 +12,10 @@ import {
 import {
   By
 } from '@angular/platform-browser';
+
+import {
+  expect
+} from '@skyux-sdk/testing';
 
 import {
   SkyEmailValidationFixturesModule
@@ -42,7 +47,6 @@ describe('Email validation', () => {
 
     inputEl.dispatchEvent(changeEvent);
     compFixture.detectChanges();
-    tick();
 
   }
 
@@ -51,7 +55,7 @@ describe('Email validation', () => {
     let ngModel: NgModel;
     let nativeElement: HTMLElement;
 
-    beforeEach(() => {
+    beforeEach(fakeAsync(() => {
         TestBed.configureTestingModule({
             imports: [
                 SkyEmailValidationFixturesModule,
@@ -63,33 +67,34 @@ describe('Email validation', () => {
         let input = fixture.debugElement.query(By.css('input'));
         ngModel = <NgModel> input.injector.get(NgModel);
         component = fixture.componentInstance;
-    });
+    }));
 
     it('should validate correct input', fakeAsync(() => {
-        fixture.detectChanges();
-        tick();
-        setInput(nativeElement, 'joe@abc.com', fixture);
-        fixture.detectChanges();
+      fixture.detectChanges();
+      tick();
+      setInput(nativeElement, 'joe@abc.com', fixture);
+      fixture.detectChanges();
 
-        expect(nativeElement.querySelector('input').value).toBe('joe@abc.com');
+      expect(nativeElement.querySelector('input').value).toBe('joe@abc.com');
 
-        expect(ngModel.control.valid).toBe(true);
-        expect(ngModel.control.pristine).toBe(false);
-        expect(ngModel.control.touched).toBe(false);
-
+      expect(ngModel.control.valid).toBe(true);
+      expect(ngModel.control.pristine).toBe(false);
+      expect(ngModel.control.touched).toBe(false);
     }));
+
     it('should validate incorrect input', fakeAsync(() => {
-        fixture.detectChanges();
-        tick();
-        setInput(nativeElement, '[]awefhawenfc0293ejwf]', fixture);
-        fixture.detectChanges();
+      fixture.detectChanges();
+      tick();
+      setInput(nativeElement, '[]awefhawenfc0293ejwf]', fixture);
+      fixture.detectChanges();
 
-        expect(nativeElement.querySelector('input').value).toBe('[]awefhawenfc0293ejwf]');
+      expect(nativeElement.querySelector('input').value).toBe('[]awefhawenfc0293ejwf]');
 
-        expect(ngModel.control.valid).toBe(false);
-        expect(ngModel.control.pristine).toBe(false);
-        expect(ngModel.control.touched).toBe(false);
+      expect(ngModel.control.valid).toBe(false);
+      expect(ngModel.control.pristine).toBe(false);
+      expect(ngModel.control.touched).toBe(false);
     }));
+
     it('should validate incorrect input — multiple @ symbols in email', fakeAsync(() => {
       fixture.detectChanges();
       tick();
@@ -101,18 +106,27 @@ describe('Email validation', () => {
       expect(ngModel.control.valid).toBe(false);
       expect(ngModel.control.pristine).toBe(false);
       expect(ngModel.control.touched).toBe(false);
-  }));
+    }));
+
     it('should handle invalid and then valid input', fakeAsync(() => {
-        fixture.detectChanges();
-        tick();
-        setInput(nativeElement, '[]awefhawenfc0293ejwf]', fixture);
-        setInput(nativeElement, 'joe@abc.com', fixture);
+      fixture.detectChanges();
+      tick();
+      setInput(nativeElement, '[]awefhawenfc0293ejwf]', fixture);
+      setInput(nativeElement, 'joe@abc.com', fixture);
 
-        expect(nativeElement.querySelector('input').value).toBe('joe@abc.com');
-        expect(component.emailValidator).toEqual('joe@abc.com');
+      expect(nativeElement.querySelector('input').value).toBe('joe@abc.com');
+      expect(component.emailValidator).toEqual('joe@abc.com');
 
-        expect(ngModel.control.valid).toBe(true);
-        expect(ngModel.control.pristine).toBe(false);
-        expect(ngModel.control.touched).toBe(false);
+      expect(ngModel.control.valid).toBe(true);
+      expect(ngModel.control.pristine).toBe(false);
+      expect(ngModel.control.touched).toBe(false);
+    }));
+
+    it('should pass accessibility', async(() => {
+      setInput(nativeElement, '[]awefhawenfc0293ejwf]', fixture);
+      fixture.detectChanges();
+      fixture.whenStable().then(() => {
+        expect(fixture.nativeElement).toBeAccessible();
+      });
     }));
 });

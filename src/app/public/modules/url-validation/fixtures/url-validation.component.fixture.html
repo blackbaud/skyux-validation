@@ -1,8 +1,11 @@
 <div>
-  <input
-    skyUrlValidation
-    [(ngModel)]="urlValidator"
-    #url="ngModel">
+  <label>
+    Test input
+    <input
+      skyUrlValidation
+      [(ngModel)]="urlValidator"
+      #url="ngModel">
+  </label>
   <div
     class="sky-error-label"
     *ngIf="url.errors && url.errors.skyUrl && (url.dirty || url.touched)">
