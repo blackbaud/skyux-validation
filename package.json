@@ -19,12 +19,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blackbaud/skyux-sample.git"
+    "url": "git+https://github.com/blackbaud/skyux-validation.git"
   },
   "bugs": {
-    "url": "https://github.com/blackbaud/skyux-sample/issues"
+    "url": "https://github.com/blackbaud/skyux-validation/issues"
   },
-  "homepage": "https://github.com/blackbaud/skyux-sample#readme",
+  "homepage": "https://github.com/blackbaud/skyux-validation#readme",
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {
