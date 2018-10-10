@@ -1,7 +1,7 @@
 {
-  "name": "@skyux/sample",
+  "name": "@skyux/validation",
   "version": "3.0.0-alpha.0",
-  "description": "SKY UX Sample",
+  "description": "SKY UX Validation",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
   "engines": {
@@ -25,7 +25,11 @@
     "url": "https://github.com/blackbaud/skyux-validation/issues"
   },
   "homepage": "https://github.com/blackbaud/skyux-validation#readme",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@angular/common": "^4.3.6",
+    "@angular/core": "^4.3.6",
+    "@angular/forms": "^4.3.6"
+  },
   "dependencies": {},
   "devDependencies": {
     "@angular/animations": "4.3.6",
