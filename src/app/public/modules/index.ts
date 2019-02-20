@@ -1,3 +1,3 @@
 export * from './email-validation';
 export * from './url-validation';
-export * from './validation-tool';
+export * from './validation';

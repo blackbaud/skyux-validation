@@ -2,12 +2,16 @@ import {
   Directive,
   forwardRef
 } from '@angular/core';
+
 import {
   Validator,
   NG_VALIDATORS,
   AbstractControl
 } from '@angular/forms';
-import { SkyValidationTool } from '../validation-tool/validation-tool';
+
+import {
+  SkyValidation
+} from '../validation/validation';
 
 // tslint:disable:no-forward-ref no-use-before-declare
 const SKY_EMAIL_VALIDATION_VALIDATOR = {
@@ -42,6 +46,6 @@ export class SkyEmailValidationDirective implements Validator {
   }
 
   public emailIsValid(email: string): boolean {
-    return SkyValidationTool.validateEmailAddress(email);
+    return SkyValidation.isEmail(email);
   }
 }

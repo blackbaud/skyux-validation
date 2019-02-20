@@ -1,5 +1,5 @@
-export class SkyValidationTool {
-  public static validateEmailAddress(emailAddress: string): boolean {
+export abstract class SkyValidation {
+  public static isEmail(emailAddress: string): boolean {
     // The regex was obtained from http://emailregex.com/
     // which claims to correctly handle ~99% of all email addresses.
     // tslint:disable-next-line:max-line-length
@@ -7,7 +7,7 @@ export class SkyValidationTool {
     return regex.test(emailAddress);
   }
 
-  public static validateUrl(url: string): boolean {
+  public static isUrl(url: string): boolean {
     let regex = /^((http|https):\/\/)?([\w\-]+\.)+[\w\-]+/i;
     return regex.test(url);
   }
