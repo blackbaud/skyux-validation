@@ -7,7 +7,9 @@ import {
   SkyValidation
 } from '../validation';
 
+// @dynamic
 export class SkyValidators {
+
   public static email(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
 
