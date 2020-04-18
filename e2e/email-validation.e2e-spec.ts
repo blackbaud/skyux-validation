@@ -16,7 +16,9 @@ describe('Email validation', () => {
     SkyHostBrowser.setWindowBreakpoint('lg');
     element(by.css('#email-validation-input')).sendKeys('foobar');
     browser.executeScript('document.getElementById("email-validation-input").blur()');
-    expect('#screenshot-email-validation').toMatchBaselineScreenshot(done);
+    expect('#screenshot-email-validation').toMatchBaselineScreenshot(done, {
+      screenshotName: 'email-validation'
+    });
   });
 
   it('should match previous email validation screenshot (screen: xs)', (done) => {
@@ -24,7 +26,9 @@ describe('Email validation', () => {
     SkyHostBrowser.setWindowBreakpoint('xs');
     element(by.css('#email-validation-input')).sendKeys('foobar');
     browser.executeScript('document.getElementById("email-validation-input").blur()');
-    expect('#screenshot-email-validation').toMatchBaselineScreenshot(done);
+    expect('#screenshot-email-validation').toMatchBaselineScreenshot(done, {
+      screenshotName: 'email-validation-xs'
+    });
   });
 
 });
