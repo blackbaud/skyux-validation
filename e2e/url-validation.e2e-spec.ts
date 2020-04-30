@@ -16,7 +16,9 @@ describe('URL validation', () => {
     SkyHostBrowser.setWindowBreakpoint('lg');
     element(by.css('#url-validation-input')).sendKeys('foobar');
     browser.executeScript('document.getElementById("url-validation-input").blur()');
-    expect('#screenshot-url-validation').toMatchBaselineScreenshot(done);
+    expect('#screenshot-url-validation').toMatchBaselineScreenshot(done, {
+      screenshotName: 'url-validation'
+    });
   });
 
   it('should match previous url validation screenshot (screen: xs)', (done) => {
@@ -24,7 +26,9 @@ describe('URL validation', () => {
     SkyHostBrowser.setWindowBreakpoint('xs');
     element(by.css('#url-validation-input')).sendKeys('foobar');
     browser.executeScript('document.getElementById("url-validation-input").blur()');
-    expect('#screenshot-url-validation').toMatchBaselineScreenshot(done);
+    expect('#screenshot-url-validation').toMatchBaselineScreenshot(done, {
+      screenshotName: 'url-validation-xs'
+    });
   });
 
 });
