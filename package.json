@@ -49,6 +49,7 @@
     "@skyux/i18n": "4.0.0-rc.5",
     "@skyux/indicators": "4.0.0-rc.5",
     "@skyux/omnibar-interop": "4.0.0-rc.0",
+    "@skyux/router": "4.0.0-rc.0",
     "@skyux/theme": "4.0.0-rc.6",
     "@skyux/validation": "4.0.0-rc.0",
     "codelyzer": "5.2.2",
