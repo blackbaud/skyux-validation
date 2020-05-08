@@ -6,7 +6,7 @@
 
 ### Breaking changes
 
-- Dropped support for `rxjs@5`. Consumers may install `rxjs-compat@^6` to support older versions of `rxjs`. [#23](https://github.com/blackbaud/skyux-validation/pull/23)
+- Dropped support for `rxjs@5`. Consumers can install `rxjs-compat@^6` to support older versions of `rxjs`. [#23](https://github.com/blackbaud/skyux-validation/pull/23)
 
 # 4.0.0-rc.0 (2020-04-17)
 
@@ -16,7 +16,7 @@
 
 ### Breaking changes
 
-- Dropped support for `rxjs@5`. Consumers may install `rxjs-compat@^6` to support older versions of `rxjs`. [#23](https://github.com/blackbaud/skyux-validation/pull/23)
+- Dropped support for `rxjs@5`. Consumers can install `rxjs-compat@^6` to support older versions of `rxjs`. [#23](https://github.com/blackbaud/skyux-validation/pull/23)
 
 # 3.2.1 (2019-09-27)
 
