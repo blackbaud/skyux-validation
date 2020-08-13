@@ -6,6 +6,17 @@
   "plugins": [
     "@skyux-sdk/builder-plugin-skyux"
   ],
+  "omnibar": {},
+  "params": {
+    "svcid": {
+      "value": "skyux"
+    }
+  },
+  "app": {
+    "styles": [
+      "@skyux/docs-tools/css/docs-tools.css"
+    ]
+  },
   "testSettings": {
     "e2e": {
       "browserSet": "speedy"
@@ -27,6 +38,7 @@
     }
   },
   "host": {
+    "url": "https://developer.blackbaud.com",
     "frameOptions": {
       "none": true
     }
