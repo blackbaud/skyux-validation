@@ -16,26 +16,26 @@ import {
 } from '@skyux/core';
 
 import {
-  SkyEmailValidationModule
+  SkyUrlValidationModule
 } from '@skyux/validation';
 
 import {
-  EmailValidationDemoComponent
-} from './email-validation-demo.component';
+  UrlValidationDemoComponent
+} from './url-validation-demo.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    SkyEmailValidationModule,
-    SkyIdModule
+    SkyIdModule,
+    SkyUrlValidationModule
   ],
   exports: [
-    EmailValidationDemoComponent
+    UrlValidationDemoComponent
   ],
   declarations: [
-    EmailValidationDemoComponent
+    UrlValidationDemoComponent
   ]
 })
-export class EmailValidationDemoModule { }
+export class UrlValidationDemoModule { }

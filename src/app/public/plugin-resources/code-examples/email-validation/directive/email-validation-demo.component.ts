@@ -8,6 +8,8 @@ import {
 })
 export class EmailValidationDemoComponent {
 
-  public emailAddress: string;
+  public demoModel: {
+    emailAddress?: string;
+  } = {};
 
 }
