@@ -1,0 +1,13 @@
+import {
+  Component
+} from '@angular/core';
+
+@Component({
+  selector: 'app-email-validation-demo',
+  templateUrl: './email-validation-demo.component.html'
+})
+export class EmailValidationDemoComponent {
+
+  public emailAddress: string;
+
+}
