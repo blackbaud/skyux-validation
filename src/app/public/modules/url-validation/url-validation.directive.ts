@@ -32,12 +32,11 @@ const SKY_URL_VALIDATION_VALIDATOR = {
 })
 
 export class SkyUrlValidationDirective implements Validator {
-  public validate(control: AbstractControl): {[key: string]: any} | null {
+  public validate(control: AbstractControl): {[key: string]: any} {
     const value = control.value;
 
     if (!value) {
-      // tslint:disable-next-line: no-null-keyword
-      return null;
+      return;
     }
 
     if (!this.urlIsValid(value)) {
@@ -47,9 +46,6 @@ export class SkyUrlValidationDirective implements Validator {
         }
       };
     }
-
-    // tslint:disable-next-line: no-null-keyword
-    return null;
   }
 
   public urlIsValid(url: string): boolean {

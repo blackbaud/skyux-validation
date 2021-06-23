@@ -19,7 +19,7 @@ export class SkyValidators {
    * errors or `undefined` immediately when users enter values.
    * @param control
    */
-  public static email(control: AbstractControl): ValidationErrors | undefined {
+  public static email(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
 
     if (!value) {
@@ -36,7 +36,7 @@ export class SkyValidators {
    * immediately when users enter values.
    * @param control
    */
-  public static url(control: AbstractControl): ValidationErrors | undefined {
+  public static url(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
 
     if (!value) {

@@ -1,7 +1,3 @@
-# 5.0.0-beta.0 (2021-06-23)
-
-- Initial beta release.
-
 # 4.0.1 (2020-08-07)
 
 - Added support for `@skyux/theme@4.8.0` and `@skyux-sdk/builder@4.3.0`. [#34](https://github.com/blackbaud/skyux-validation/pull/34)

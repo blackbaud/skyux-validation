@@ -19,15 +19,15 @@
     />
   </div>
 
-  <ng-container *ngIf="emailControl?.errors && emailControl?.touched">
+  <ng-container *ngIf="emailControl.errors && emailControl.touched">
 
-    <div *ngIf="emailControl?.errors?.required"
+    <div *ngIf="emailControl.errors.required"
       class="sky-error-label"
     >
       Email address is required.
     </div>
 
-    <div *ngIf="emailControl?.errors?.skyEmail && emailControl?.dirty"
+    <div *ngIf="emailControl.errors.skyEmail && emailControl.dirty"
       class="sky-error-label"
     >
       Enter a valid email in the "joe@abc.com" format.
