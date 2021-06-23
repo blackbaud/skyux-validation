@@ -33,11 +33,12 @@ const SKY_EMAIL_VALIDATION_VALIDATOR = {
 
 export class SkyEmailValidationDirective implements Validator {
 
-  public validate(control: AbstractControl): {[key: string]: any} {
+  public validate(control: AbstractControl): {[key: string]: any} | null {
     let value = control.value;
 
     if (!value) {
-      return;
+      // tslint:disable-next-line: no-null-keyword
+      return null;
     }
 
     if (!this.emailIsValid(value)) {
@@ -48,6 +49,8 @@ export class SkyEmailValidationDirective implements Validator {
       };
     }
 
+    // tslint:disable-next-line: no-null-keyword
+    return null;
   }
 
   public emailIsValid(email: string): boolean {
