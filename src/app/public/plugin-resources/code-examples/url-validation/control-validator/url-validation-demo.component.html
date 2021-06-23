@@ -19,15 +19,15 @@
     />
   </div>
 
-  <ng-container *ngIf="urlControl.errors && urlControl.touched">
+  <ng-container *ngIf="urlControl?.errors && urlControl?.touched">
 
-    <div *ngIf="urlControl.errors.required"
+    <div *ngIf="urlControl?.errors?.required"
       class="sky-error-label"
     >
       URL is required.
     </div>
 
-    <div *ngIf="urlControl.errors.skyUrl && urlControl.dirty"
+    <div *ngIf="urlControl?.errors?.skyUrl && urlControl?.dirty"
       class="sky-error-label"
     >
       Enter a valid URL in the "http(s)://site.domain" format.

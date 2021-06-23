@@ -21,11 +21,11 @@ import {
 })
 export class EmailValidationDemoComponent implements OnInit {
 
-  public get emailControl(): AbstractControl {
+  public get emailControl(): AbstractControl | null {
     return this.formGroup.get('email');
   }
 
-  public formGroup: FormGroup;
+  public formGroup!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder

@@ -21,11 +21,11 @@ import {
 })
 export class UrlValidationDemoComponent implements OnInit {
 
-  public get urlControl(): AbstractControl {
+  public get urlControl(): AbstractControl | null {
     return this.formGroup.get('url');
   }
 
-  public formGroup: FormGroup;
+  public formGroup!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder

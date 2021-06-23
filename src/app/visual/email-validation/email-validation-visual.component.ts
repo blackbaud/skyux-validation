@@ -7,5 +7,5 @@ import {
   templateUrl: './email-validation-visual.component.html'
 })
 export class SkyEmailValidationVisualComponent {
-  public emailValidator: string;
+  public emailValidator!: string;
 }
