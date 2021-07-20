@@ -8,12 +8,16 @@ import {
 
 import {
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
 } from '@angular/forms';
 
 import {
   SkyIdModule
 } from '@skyux/core';
+
+import {
+  SkyInputBoxModule
+} from '@skyux/forms'
 
 import {
   SkyEmailValidationModule
@@ -29,7 +33,8 @@ import {
     FormsModule,
     ReactiveFormsModule,
     SkyEmailValidationModule,
-    SkyIdModule
+    SkyIdModule,
+    SkyInputBoxModule
   ],
   exports: [
     EmailValidationDemoComponent
