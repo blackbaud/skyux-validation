@@ -8,7 +8,7 @@ import {
 
 import {
   FormsModule,
-  ReactiveFormsModule,
+  ReactiveFormsModule
 } from '@angular/forms';
 
 import {
@@ -17,7 +17,7 @@ import {
 
 import {
   SkyInputBoxModule
-} from '@skyux/forms'
+} from '@skyux/forms';
 
 import {
   SkyEmailValidationModule
