@@ -17,6 +17,9 @@
       "dom"
     ],
     "paths": {
+      "@skyux/validation": [
+        "projects/validation/src/public-api.ts"
+      ],
       "validation": [
         "dist/validation/validation",
         "dist/validation"

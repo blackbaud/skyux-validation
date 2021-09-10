@@ -13,7 +13,7 @@ import {
 
 import {
   SkyValidators
-} from '@skyux/validation';
+} from 'projects/validation/src/public-api';
 
 @Component({
   selector: 'app-url-validation-demo',

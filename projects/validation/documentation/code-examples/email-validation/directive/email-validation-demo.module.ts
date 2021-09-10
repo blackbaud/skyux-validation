@@ -20,7 +20,7 @@ import {
 
 import {
   SkyEmailValidationModule
-} from '@skyux/validation';
+} from 'projects/validation/src/public-api';
 
 import {
   EmailValidationDemoComponent

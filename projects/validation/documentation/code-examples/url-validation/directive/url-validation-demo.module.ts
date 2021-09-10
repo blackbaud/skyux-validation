@@ -20,7 +20,7 @@ import {
 
 import {
   SkyUrlValidationModule
-} from '@skyux/validation';
+} from 'projects/validation/src/public-api';
 
 import {
   UrlValidationDemoComponent
