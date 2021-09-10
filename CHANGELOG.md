@@ -1,3 +1,7 @@
+# 5.0.0-beta.1 (2021-09-10)
+
+- Migrated to Angular CLI. [#50](https://github.com/blackbaud/skyux-validation/pull/50)
+
 # 5.0.0-beta.0 (2021-06-24)
 
 - Initial beta release.
