@@ -1,4 +1,4 @@
-# 5.0.0-beta.2 (2021-10-21)
+# 5.0.0-beta.2 (2021-9-21)
 
 - Fixed the public exports API to be consistent with the other SKY UX component libraries. [#53](https://github.com/blackbaud/skyux-validation/pull/53)
 
