@@ -1,6 +1,6 @@
 # 5.0.0-beta.2 (2021-10-21)
 
-- Fixed the public API exports to use the proper lambda character. [#53](https://github.com/blackbaud/skyux-validation/pull/53)
+- Fixed the public exports API to be consistent with the other SKY UX component libraries. [#53](https://github.com/blackbaud/skyux-validation/pull/53)
 
 # 5.0.0-beta.1 (2021-09-10)
 
