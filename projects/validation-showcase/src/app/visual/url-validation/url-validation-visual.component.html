@@ -1,6 +1,4 @@
-<div
-  id="screenshot-url-validation"
-  style="max-width: 50%">
+<div id="screenshot-url-validation" style="max-width: 50%">
   <label>
     Url:
     <input
@@ -8,13 +6,14 @@
       id="url-validation-input"
       skyUrlValidation
       [(ngModel)]="url"
-      #input="ngModel">
+      #input="ngModel"
+    />
   </label>
   <div
     class="sky-error-label"
-    *ngIf="input.errors && input.errors.skyUrl && (input.dirty && input.touched)">
-    <span
-      [hidden]="!input.errors.skyUrl.invalid">
+    *ngIf="input.errors && input.errors.skyUrl && input.dirty && input.touched"
+  >
+    <span [hidden]="!input.errors.skyUrl.invalid">
       Please enter valid url with format http(s)://site.domain
     </span>
   </div>
