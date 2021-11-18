@@ -8,24 +8,24 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/visual'
+    redirectTo: '/visual',
   },
   {
     path: 'visual',
-    component: VisualComponent
+    component: VisualComponent,
   },
   {
     path: 'visual/email-validation',
-    component: SkyEmailValidationVisualComponent
+    component: SkyEmailValidationVisualComponent,
   },
   {
     path: 'visual/url-validation',
-    component: SkyUrlValidationDemoComponent
-  }
+    component: SkyUrlValidationDemoComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

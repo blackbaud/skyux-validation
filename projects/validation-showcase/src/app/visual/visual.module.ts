@@ -7,19 +7,12 @@ import { SkyEmailValidationVisualComponent } from './email-validation/email-vali
 import { SkyUrlValidationDemoComponent } from './url-validation/url-validation-visual.component';
 import { VisualComponent } from './visual.component';
 
-
-
 @NgModule({
   declarations: [
     SkyEmailValidationVisualComponent,
     SkyUrlValidationDemoComponent,
-    VisualComponent
+    VisualComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule,
-    SkyUrlValidationModule
-  ]
+  imports: [CommonModule, FormsModule, RouterModule, SkyUrlValidationModule],
 })
-export class VisualModule { }
+export class VisualModule {}
